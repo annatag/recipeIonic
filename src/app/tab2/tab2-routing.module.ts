@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
+  },  {
+    path: 'recipe-detail',
+    loadChildren: () => import('./recipe-detail/recipe-detail.module').then( m => m.RecipeDetailPageModule)
   }
+
 ];
 
 @NgModule({
