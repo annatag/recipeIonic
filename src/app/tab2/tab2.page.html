@@ -1,15 +1,16 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      My Recipes
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Recipes</ion-title>  
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let recipe of recipes">
-      <ion-avatar>
+    <ion-item *ngFor="let recipe of recipes" [routerLink]="['./recipe-detail', recipe.id]">
+      <ion-avatar slot="start">
         <ion-img [src] = "recipe.imageUrl"></ion-img>
       </ion-avatar>
       <ion-label> {{recipe.recipeName }}</ion-label>

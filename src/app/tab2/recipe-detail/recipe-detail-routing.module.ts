@@ -5,7 +5,7 @@ import { RecipeDetailPage } from './recipe-detail.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':recipeId',
     component: RecipeDetailPage
   }
 ];
